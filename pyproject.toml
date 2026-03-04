@@ -19,7 +19,7 @@ dev = [
     "pytest>=8.0.0",
     "pytest-cov>=4.1.0",
     "pre-commit>=3.6.0",
-    "mypy==1.19.0",          # keep in sync with super-linter version
+    "mypy==1.19.1",          # keep in sync with super-linter version
     "detect-secrets==1.5.0", # keep in sync with .pre-commit-config.yaml detect-secrets rev
 ]
 
