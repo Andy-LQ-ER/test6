@@ -1,6 +1,6 @@
-# your-project-name
+# test6
 
-> Short description of your project.
+> test
 
 This repository is a **Python project template** — a pre-configured starting point that includes automated testing, code quality checks, security scanning, and GitHub repository settings. Instead of spending days setting all of this up from scratch for every new project, you clone this template and get everything out of the box.
 

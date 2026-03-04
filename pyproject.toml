@@ -1,11 +1,11 @@
 [project]
-name = "your-project-name"
+name = "test6"
 version = "0.1.0"
-description = "Your project description"
+description = "test"
 readme = "README.md"
 requires-python = ">=3.12"
 authors = [
-    { name = "Your Name", email = "you@example.com" }
+    { name = "andy", email = "andy@edgered.com.au" }
 ]
 license = { text = "MIT" }
 
@@ -88,7 +88,7 @@ unfixable = []
 convention = "google"
 
 [tool.ruff.lint.isort]
-known-first-party = ["your_package"]
+known-first-party = ["test6"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -111,7 +111,7 @@ warn_unused_configs = true
 exclude = ["tests/"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/your_package"]
+packages = ["src/test6"]
 
 [build-system]
 requires = ["hatchling"]

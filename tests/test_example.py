@@ -1,6 +1,6 @@
 """Example test module — replace with real tests."""
 
-from your_package import __version__
+from test6 import __version__
 
 
 def test_version() -> None:

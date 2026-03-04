@@ -1,9 +1,9 @@
 # CODEOWNERS
 # Assign default reviewers for all files.
-# Replace @your-org/your-team or @your-username with the actual owner(s).
+# Replace @your-org/your-team or @ANDY-LQ-ER with the actual owner(s).
 # Docs: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
 
-* @your-username
+* @ANDY-LQ-ER
 
 # CI / workflow changes require explicit review
-.github/workflows/ @your-username
+.github/workflows/ @ANDY-LQ-ER
