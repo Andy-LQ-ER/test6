@@ -1,0 +1,38 @@
+language: "en-US"
+
+tone_instructions: "You are a senior Python and cloud infrastructure engineer. Be direct, concise, and helpful. Focus on logic errors, security, and best practices."
+
+reviews:
+  profile: "assertive"
+  poem: false
+
+  auto_review:
+    enabled: true
+    ignore_usernames: []
+
+  path_instructions:
+    - path: "**/*.py"
+      instructions: >
+        Focus on: security vulnerabilities, credential/secret exposure, error handling
+        that may leak sensitive info, proper use of environment variables (never hardcoded
+        secrets), and correctness of business logic.
+
+    - path: "pyproject.toml"
+      instructions: "Check for known security vulnerabilities, breaking API changes, and compatibility issues with other dependencies."
+
+    - path: ".github/workflows/*.yml"
+      instructions: >
+        Check for secret exposure in logs, use of pinned action versions, overly broad
+        permissions, and whether sensitive env vars are handled securely. Flag any
+        GITHUB_TOKEN misuse.
+
+    - path: "tests/**/*.py"
+      instructions: "Check that tests cover error paths and edge cases, not just the happy path."
+
+  path_filters:
+    - "!**/*.lock"           # uv.lock, poetry.lock, etc.
+    - "!.venv/**"            # Python virtual environment
+    - "!**/__pycache__/**"   # Python bytecode cache
+
+chat:
+  auto_reply: true

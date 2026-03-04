@@ -1,0 +1,28 @@
+# Copy this file to terraform.tfvars and fill in your values.
+# Never commit terraform.tfvars — it contains your GitHub token.
+#
+# -------------------------------------------------------------------
+# WORKFLOW A — Create a brand new repo with Terraform:
+#   terraform init
+#   terraform plan
+#   terraform apply
+#
+# WORKFLOW B — Manage an existing repo (created via GitHub template button):
+#   terraform init
+#   terraform import github_repository.repo YOUR-REPO-NAME
+#   terraform apply
+# -------------------------------------------------------------------
+
+github_token      = "ghp_your_token_here"
+github_owner      = "your-github-username-or-org"
+repo_name         = "your-new-repo-name"
+repo_description  = "Your project description"
+repo_visibility   = "private"
+default_branch    = "master"
+
+# These must match the job *names* (not file names) in .github/workflows/ci.yml exactly.
+# Check the `name:` fields under `jobs:` in ci.yml.
+required_status_checks = [
+  "Lint Code Base",
+  "Test",
+]
