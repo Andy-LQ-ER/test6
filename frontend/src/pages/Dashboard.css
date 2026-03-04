@@ -1,0 +1,17 @@
+.dashboard {
+  padding: 2rem 1rem;
+}
+
+.dashboard-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.dashboard-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  color: var(--gray-400);
+  font-size: 1.1rem;
+}
