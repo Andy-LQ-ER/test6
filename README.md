@@ -2,7 +2,90 @@
 
 > test
 
-This repository is a **Python project template** — a pre-configured starting point that includes automated testing, code quality checks, security scanning, and GitHub repository settings. Instead of spending days setting all of this up from scratch for every new project, you clone this template and get everything out of the box.
+---
+
+## VaultBank — Getting Started
+
+A full-stack bank web application built with **FastAPI** (backend) and **React + Vite** (frontend).
+
+### Features
+
+- User registration and login (JWT authentication)
+- View account balance and account number
+- Deposit funds
+- Withdraw funds
+- Transfer funds to another account
+- Transaction history
+
+### Prerequisites
+
+- Python 3.12+ with [uv](https://astral.sh/uv)
+- Node.js 18+
+
+### Environment setup
+
+Copy the example env file and set your secret key:
+
+```bash
+cp .env.example .env
+```
+
+Open `.env` and replace `change-me-to-a-long-random-string` with a long random value, for example:
+
+```bash
+python -c "import secrets; print(secrets.token_hex(32))"
+```
+
+### Running the backend
+
+```bash
+uv run uvicorn src.test6.main:app --reload --port 8000
+```
+
+The API will be available at `http://localhost:8000`.
+Interactive API docs are at `http://localhost:8000/api/docs`.
+
+### Running the frontend
+
+```bash
+cd frontend
+npm install   # first time only
+npm run dev
+```
+
+The app will be available at `http://localhost:5173`.
+
+### Project structure
+
+```
+src/test6/
+  main.py              # FastAPI app entry point
+  database.py          # SQLite engine and session
+  models.py            # User, Account, Transaction ORM models
+  schemas.py           # Pydantic request/response schemas
+  auth.py              # JWT tokens and password hashing
+  routers/
+    auth.py            # POST /api/auth/register, /login, GET /api/auth/me
+    accounts.py        # GET /api/accounts/me
+    transactions.py    # POST /api/transactions/deposit, /withdraw, /transfer
+                       # GET /api/transactions/history
+
+frontend/src/
+  api/client.js        # Axios client with auth interceptor
+  pages/
+    Login.jsx          # Login page
+    Register.jsx       # Registration page
+    Dashboard.jsx      # Main dashboard
+  components/
+    Navbar.jsx         # Top navigation bar
+    BalanceCard.jsx    # Balance display with action buttons
+    TransactionList.jsx# Transaction history list
+    ActionModal.jsx    # Shared modal for deposit/withdraw/transfer
+```
+
+---
+
+This repository is also a **Python project template** — a pre-configured starting point that includes automated testing, code quality checks, security scanning, and GitHub repository settings. Instead of spending days setting all of this up from scratch for every new project, you clone this template and get everything out of the box.
 
 ---
 

@@ -1,0 +1,46 @@
+.navbar {
+  background: var(--navy);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 60px;
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-icon { font-size: 1.4rem; }
+
+.brand-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-name {
+  font-size: 0.9rem;
+  color: #bee3f8;
+}
+
+.btn-logout {
+  background: rgba(255,255,255,0.12);
+  color: var(--white);
+  font-size: 0.85rem;
+  padding: 0.4rem 0.9rem;
+}
+.btn-logout:hover { background: rgba(255,255,255,0.22); }

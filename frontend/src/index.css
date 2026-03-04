@@ -1,0 +1,102 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --navy: #1a365d;
+  --blue: #2b6cb0;
+  --blue-light: #ebf4ff;
+  --green: #276749;
+  --green-light: #f0fff4;
+  --red: #c53030;
+  --red-light: #fff5f5;
+  --yellow-light: #fffff0;
+  --gray-50: #f7fafc;
+  --gray-100: #edf2f7;
+  --gray-200: #e2e8f0;
+  --gray-400: #a0aec0;
+  --gray-600: #718096;
+  --gray-800: #2d3748;
+  --white: #ffffff;
+  --radius: 8px;
+  --shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.06);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--gray-50);
+  color: var(--gray-800);
+  min-height: 100vh;
+}
+
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.6rem 1.2rem;
+  transition: opacity 0.15s, background 0.15s;
+}
+button:disabled { opacity: 0.6; cursor: not-allowed; }
+
+input {
+  font-family: inherit;
+  font-size: 0.95rem;
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  outline: none;
+  transition: border-color 0.15s;
+}
+input:focus { border-color: var(--blue); }
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gray-600);
+  margin-bottom: 0.3rem;
+}
+
+.error-msg {
+  background: var(--red-light);
+  color: var(--red);
+  border: 1px solid #fed7d7;
+  border-radius: var(--radius);
+  padding: 0.7rem 1rem;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.btn-primary {
+  background: var(--blue);
+  color: var(--white);
+  width: 100%;
+  padding: 0.75rem;
+  font-weight: 600;
+}
+.btn-primary:hover:not(:disabled) { background: var(--navy); }
+
+.btn-action {
+  background: var(--blue-light);
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+.btn-action:hover:not(:disabled) { background: #bee3f8; }
+
+.btn-danger {
+  background: var(--red-light);
+  color: var(--red);
+  font-weight: 600;
+}
+.btn-danger:hover:not(:disabled) { background: #fed7d7; }

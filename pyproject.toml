@@ -10,7 +10,13 @@ authors = [
 license = { text = "MIT" }
 
 dependencies = [
-    # Add your dependencies here
+    "fastapi[standard]>=0.115.0",
+    "sqlalchemy>=2.0.0",
+    "python-jose[cryptography]>=3.3.0",
+    "bcrypt>=4.0.0",
+    "uvicorn[standard]>=0.30.0",
+    "python-multipart>=0.0.9",
+    "email-validator>=2.1.0",
 ]
 
 [dependency-groups]
@@ -82,6 +88,15 @@ unfixable = []
     "S101",    # Use of assert (pytest uses assertions)
     "D",       # No docstrings required in tests
     "PLR2004", # Magic value used in comparison
+]
+"src/test6/**/*.py" = [
+    "D101",    # Missing docstring in public class
+    "D102",    # Missing docstring in public method
+    "D107",    # Missing docstring in __init__
+    "EM101",   # Exception message in f-string (too pedantic for API handlers)
+    "EM102",   # Exception message in f-string
+    "TRY003",  # Avoid specifying long messages outside the exception class
+    "ARG001",  # Unused function argument (common in FastAPI dependency injection)
 ]
 
 [tool.ruff.lint.pydocstyle]
