@@ -15,7 +15,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "ruff==0.14.8",          # keep in sync with .pre-commit-config.yaml ruff-pre-commit rev and super-linter version
+    "ruff==0.15.4",          # keep in sync with .pre-commit-config.yaml ruff-pre-commit rev and super-linter version
     "pytest>=8.0.0",
     "pytest-cov>=4.1.0",
     "pre-commit>=3.6.0",
