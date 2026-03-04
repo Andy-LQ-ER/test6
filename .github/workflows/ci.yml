@@ -39,7 +39,7 @@ jobs:
           VALIDATE_MD: true
 
       - name: Trivy vulnerability scan (warning only)
-        uses: aquasecurity/trivy-action@0.34.1
+        uses: aquasecurity/trivy-action@0.34.2
         continue-on-error: true
         with:
           scan-type: "fs"
