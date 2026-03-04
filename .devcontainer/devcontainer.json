@@ -1,0 +1,45 @@
+{
+    "name": "Python Dev",
+    "image": "mcr.microsoft.com/devcontainers/python:1-3.12-bullseye",
+
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "lts"
+        }
+    },
+
+    "mounts": [
+        "source=${localEnv:USERPROFILE}/.claude,target=/home/vscode/.claude,type=bind,consistency=cached"
+    ],
+
+    "onCreateCommand": "pip install uv",
+    "postCreateCommand": "uv sync --all-groups && uv run pre-commit install && npm install -g @anthropic-ai/claude-code",
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "charliermarsh.ruff",
+                "ms-python.mypy-type-checker",
+                "tamasfe.even-better-toml",
+                "github.vscode-github-actions",
+                "anthropic.claude-code"
+            ],
+            "settings": {
+                "python.defaultInterpreterPath": "${containerWorkspaceFolder}/.venv/bin/python",
+                "editor.formatOnSave": true,
+                "[python]": {
+                    "editor.defaultFormatter": "charliermarsh.ruff",
+                    "editor.codeActionsOnSave": {
+                        "source.fixAll.ruff": "explicit",
+                        "source.organizeImports.ruff": "explicit"
+                    }
+                },
+                "mypy-type-checker.preferDaemon": true
+            }
+        }
+    },
+
+    "remoteUser": "vscode"
+}
