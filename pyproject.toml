@@ -18,7 +18,7 @@ dev = [
     "ruff==0.14.8",          # keep in sync with .pre-commit-config.yaml ruff-pre-commit rev and super-linter version
     "pytest>=8.0.0",
     "pytest-cov>=4.1.0",
-    "pre-commit>=3.6.0",
+    "pre-commit>=4.6.0",
     "mypy==1.19.0",          # keep in sync with super-linter version
     "detect-secrets==1.5.0", # keep in sync with .pre-commit-config.yaml detect-secrets rev
 ]
